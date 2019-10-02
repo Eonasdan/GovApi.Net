@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GovApi.Core
+namespace GovApi.Core.Models
 {
     public class PagingSortingOptions
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace GovApi.Core
+namespace GovApi.Core.Converters
 {
     internal class ParseStringConverter : JsonConverter
     {

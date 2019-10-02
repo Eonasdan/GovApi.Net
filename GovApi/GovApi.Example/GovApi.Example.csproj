@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GovApi.Fda\GovApi.Fda.csproj" />
     <ProjectReference Include="..\GovApi.FoodDataCenteral\GovApi.FoodDataCentral.csproj" />
   </ItemGroup>
 

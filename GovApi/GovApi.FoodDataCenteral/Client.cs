@@ -20,8 +20,7 @@ namespace GovApi.FoodDataCentral
             _searchApi = new Uri($"search?api_key={apiKey}", UriKind.Relative);
         }
 
-        [System.Diagnostics.Contracts.Pure]
-        [UsedImplicitly]
+        [PublicAPI]
         public async Task<Result> SearchAsync(Options options)
         {
             if (options == null || string.IsNullOrEmpty(options.Term)) 
@@ -33,6 +32,7 @@ namespace GovApi.FoodDataCentral
             return Result.FromJson(json);
         }
 
+        [PublicAPI]
         public async Task<Detail.Result> DetailsAsync(int id)
         {
             if (id == 0) return new Detail.Result();
@@ -42,6 +42,7 @@ namespace GovApi.FoodDataCentral
             return Detail.Result.FromJson(json);
         }
 
+        [PublicAPI]
         public async Task<Detail.Result> DetailsAsync(long id)
         {
             return await DetailsAsync(Convert.ToInt32(id));

@@ -1,4 +1,5 @@
 ﻿using GovApi.Core;
+using GovApi.Core.Models;
 using Newtonsoft.Json;
 
 namespace GovApi.FoodDataCentral.Search

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Net;
 
-namespace GovApi.Core
+namespace GovApi.Core.Models
 {
     internal class ParameterDictionary : List<KeyValuePair<string, string>>
     {

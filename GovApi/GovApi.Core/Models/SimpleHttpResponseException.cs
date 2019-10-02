@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace GovApi.Core
+namespace GovApi.Core.Models
 {
     public class SimpleHttpResponseException : Exception
     {

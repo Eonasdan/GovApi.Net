@@ -1,5 +1,5 @@
 ﻿using System;
-using GovApi.Core;
+using GovApi.Core.Converters;
 using Newtonsoft.Json;
 
 namespace GovApi.FoodDataCentral.Search

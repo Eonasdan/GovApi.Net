@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using GovApi.Fda.Drug.Label;
 using GovApi.FoodDataCentral;
 using GovApi.FoodDataCentral.Search;
 
@@ -10,7 +11,18 @@ namespace GovApi.Example
     {
         private static async Task Main(string[] args)
         {
-            await TestFoodDataAsync();
+            //await TestFoodDataAsync();
+            await TestFdaAsync();
+        }
+
+        private static async Task TestFdaAsync()
+        {
+            using var client = new Fda.Client();
+            var searchResult = await client.SearchAsync(new SearchOptions //search for drugs that cause drowsiness when used
+            {
+                WhenUsing = "drowsiness"
+            });
+            var breakpoint = 1;
         }
 
         private static async Task TestFoodDataAsync()
@@ -33,6 +45,6 @@ namespace GovApi.Example
 
             breakpoint = 1;
         }
-    }
+
     }
 }
