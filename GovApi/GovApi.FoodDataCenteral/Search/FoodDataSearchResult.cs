@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace GovApi.FoodDataCentral.Search
 {
-    public class Result
+    public class FoodDataSearchResult
     {
         /// <summary>
         /// A copy of the criteria that were used in the search.
@@ -36,6 +36,6 @@ namespace GovApi.FoodDataCentral.Search
         [JsonProperty("foods")]
         public List<Food> Foods { get; set; }
 
-        public static Result FromJson(string json) => JsonConvert.DeserializeObject<Result>(json, new BaseJsonSerializerSettings());
+        public static FoodDataSearchResult FromJson(string json) => JsonConvert.DeserializeObject<FoodDataSearchResult>(json, new BaseJsonSerializerSettings());
     }
 }

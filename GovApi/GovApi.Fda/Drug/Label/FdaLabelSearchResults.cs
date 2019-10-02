@@ -5,13 +5,13 @@ using Newtonsoft.Json;
 
 namespace GovApi.Fda.Drug.Label
 {
-    public class Search
+    public class FdaLabelSearchResults
     {
         [JsonProperty("meta")]
         public Meta Meta { get; set; }
 
         [JsonProperty("results")]
-        public List<Result> Results { get; set; } = new List<Result>();
+        public List<LabelResult> Results { get; set; } = new List<LabelResult>();
 
         /// <summary>
         /// List of errors.
@@ -25,6 +25,6 @@ namespace GovApi.Fda.Drug.Label
         [PublicAPI]
         public bool NotFound => Error.Message?.Contains("No matches found!") ?? false;
 
-        public static Search FromJson(string json) => JsonConvert.DeserializeObject<Search>(json, new BaseJsonSerializerSettings());
+        public static FdaLabelSearchResults FromJson(string json) => JsonConvert.DeserializeObject<FdaLabelSearchResults>(json, new BaseJsonSerializerSettings());
     }
 }

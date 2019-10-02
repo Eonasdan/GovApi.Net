@@ -8,7 +8,7 @@ namespace GovApi.Fda.Drug.Label
     [SuppressMessage("ReSharper", "InconsistentNaming")]
     [SuppressMessage("ReSharper", "CommentTypo")]
     [SuppressMessage("ReSharper", "IdentifierTypo")]
-    public class SearchOptions
+    public class FdaLabelSearchOptions
     {
         ///<summary>
         ///The Set ID, A globally unique identifier (GUID) for the labeling, stable across all versions or revisions.

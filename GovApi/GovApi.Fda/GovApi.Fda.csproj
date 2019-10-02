@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <Description>A wrapper for OpenFDA data. Currently only supports Drug Label api.</Description>
+    <PackageProjectUrl>https://github.com/Eonasdan/GovApi.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Eonasdan/GovApi.Net</RepositoryUrl>
+    <PackageTags>government, api, fda, openfda, wrapper</PackageTags>
+    <PackageReleaseNotes>Moving my previous open fda wrapper to a combinded, larger open government api project. Changed namespacing to avoid collision.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

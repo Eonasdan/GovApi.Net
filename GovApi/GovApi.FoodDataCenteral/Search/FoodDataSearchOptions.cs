@@ -8,13 +8,8 @@ namespace GovApi.FoodDataCentral.Search
     /// Search request parameters. Note that <seealso cref="PagingSortingOptions.Limit"/>
     /// and <seealso cref="PagingSortingOptions.Skip"/> are not used.
     /// </summary>
-    public class Options : PagingSortingOptions
+    public class FoodDataSearchOptions : PagingSortingOptions
     {
-        public Options()
-        {
-            
-        }
-
         /// <summary>
         ///Search query (general text). Api field generalSearchInput
         /// </summary>

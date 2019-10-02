@@ -11,14 +11,14 @@ namespace GovApi.Example
     {
         private static async Task Main(string[] args)
         {
-            //await TestFoodDataAsync();
+            await TestFoodDataAsync();
             await TestFdaAsync();
         }
 
         private static async Task TestFdaAsync()
         {
-            using var client = new Fda.Client();
-            var searchResult = await client.SearchAsync(new SearchOptions //search for drugs that cause drowsiness when used
+            using var client = new Fda.FdaClient();
+            var searchResult = await client.SearchAsync(new FdaLabelSearchOptions //search for drugs that cause drowsiness when used
             {
                 WhenUsing = "drowsiness"
             });
@@ -27,8 +27,8 @@ namespace GovApi.Example
 
         private static async Task TestFoodDataAsync()
         {
-            using var client = new Client("DEMO_KEY");
-            var searchAsync = await client.SearchAsync(new Options
+            using var client = new FoodDataClient("DEMO_KEY");
+            var searchAsync = await client.SearchAsync(new FoodDataSearchOptions
             {
                 Term = "chocolate",
                 IncludeDataTypes = new IncludeDataTypes

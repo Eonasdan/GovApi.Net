@@ -4,6 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>GovApi.FoodDataCentral</AssemblyName>
     <RootNamespace>GovApi.FoodDataCentral</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-beta.2</Version>
+    <PackageProjectUrl>https://github.com/Eonasdan/GovApi.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Eonasdan/GovApi.Net</RepositoryUrl>
+    <PackageTags>government, api, usda, fooddatacentral, wrapper, food data</PackageTags>
+    <Description>A wrapper for the USDA Food Data Central API.</Description>
+    <PackageReleaseNotes>Testing out the new Food Data Centeral API.government, api, fda, openfda, wrapper. D'oh!</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

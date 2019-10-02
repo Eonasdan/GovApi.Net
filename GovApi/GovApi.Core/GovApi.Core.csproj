@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/Eonasdan/GovApi.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Eonasdan/GovApi.Net</RepositoryUrl>
+    <Description>Provides common functions to my other GovApi libraries.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace GovApi.Fda.Drug.Label
 {
-    public class Result
+    public class LabelResult
     {
         [JsonProperty("effective_time")]
         [JsonConverter(typeof(ParseStringConverter))]

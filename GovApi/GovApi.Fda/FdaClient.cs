@@ -9,27 +9,27 @@ using JetBrains.Annotations;
 namespace GovApi.Fda
 {
     [PublicAPI]
-    public class Client : JsonBaseClient
+    public class FdaClient : JsonBaseClient
     {
         private readonly string _apiKey;
         
-        public Client() : base("https://api.fda.gov")
+        public FdaClient() : base("https://api.fda.gov")
         { }
 
-        public Client(string apiKey) : this()
+        public FdaClient(string apiKey) : this()
         {
             _apiKey = apiKey;
         }
 
         [System.Diagnostics.Contracts.Pure]
         [UsedImplicitly]
-        public async Task<Search> SearchAsync(SearchOptions searchOptions, PagingSortingOptions pagingOptions = null, string joiner = "AND")
+        public async Task<FdaLabelSearchResults> SearchAsync(FdaLabelSearchOptions fdaLabelSearchOptions, PagingSortingOptions pagingOptions = null, string joiner = "AND")
         {
             if (pagingOptions == null) pagingOptions = new PagingSortingOptions();
 
             var parameterDictionary = new ParameterDictionary
             {
-                { "search", searchOptions.ToQuery(joiner) }
+                { "search", fdaLabelSearchOptions.ToQuery(joiner) }
             };
 
             if (pagingOptions.Limit != 0)
@@ -46,7 +46,7 @@ namespace GovApi.Fda
             var json = await GetAsync($"/drug/label.json?{parameterDictionary.ToQueryString()}");
 
 
-            return Search.FromJson(json);
+            return FdaLabelSearchResults.FromJson(json);
         }
     }
 }

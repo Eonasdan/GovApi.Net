@@ -13,15 +13,15 @@ namespace GovApi.Fda.Extensions
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="searchOptions"></param>
+        /// <param name="fdaLabelSearchOptions"></param>
         /// <param name="joiner">Supports "AND" or "OR"</param>
         /// <returns></returns>
-        public static string ToQuery(this SearchOptions searchOptions, string joiner = "AND") //todo create complex query search
+        public static string ToQuery(this FdaLabelSearchOptions fdaLabelSearchOptions, string joiner = "AND") //todo create complex query search
         {
             var search = new StringBuilder();
-            searchOptions.GetType().GetProperties().ToList().ForEach(x =>
+            fdaLabelSearchOptions.GetType().GetProperties().ToList().ForEach(x =>
             {
-                var value = x.GetValue(searchOptions);
+                var value = x.GetValue(fdaLabelSearchOptions);
                 if (value == null) return;
 
                 var propertyAttribute = (JsonPropertyAttribute)x.GetCustomAttributes().FirstOrDefault(z => (Type) z.TypeId == typeof(JsonPropertyAttribute));
